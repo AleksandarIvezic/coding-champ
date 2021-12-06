@@ -31,10 +31,14 @@ export default class ClickOutside extends Component {
   }
 
   render() {
-    return <div ref={this.getContainer} />;
+    const { children } = this.props;
+    return <div ref={this.getContainer}>{children}</div>;
   }
 }
 
 ClickOutside.propTypes = {
   onClickOutside: PropTypes.func.isRequired,
+  children: PropTypes.shape({
+    property: PropTypes.string,
+  }).isRequired,
 };
