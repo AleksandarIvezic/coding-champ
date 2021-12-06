@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
-import ClickOutside from './ClickOutside';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHome,
@@ -10,6 +9,7 @@ import {
   faUser,
   faCubes,
 } from '@fortawesome/free-solid-svg-icons';
+import ClickOutside from './ClickOutside';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
 const Navbar = () => {
@@ -21,10 +21,12 @@ const Navbar = () => {
           setState({ expanded: false });
         }}
       >
-        <SideNav  expanded={state.expanded}
-        onToggle={(expanded) => {
+        <SideNav
+          expanded={state.expanded}
+          onToggle={(expanded) => {
             setState({ expanded });
-        }}>
+          }}
+        >
           <SideNav.Toggle />
           <SideNav.Nav defaultSelected="home">
             <NavItem eventKey="home">
