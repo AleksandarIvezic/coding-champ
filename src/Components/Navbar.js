@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import SideNav, { NavItem, NavIcon, NavText } from '@trendmicro/react-sidenav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -10,10 +11,16 @@ import {
   faCubes,
 } from '@fortawesome/free-solid-svg-icons';
 import ClickOutside from './ClickOutside';
+import links from '../Library/links';
+import updateArr from '../helpers/updateArr';
 import '@trendmicro/react-sidenav/dist/react-sidenav.css';
 
 const Navbar = () => {
   const [state, setState] = useState({});
+  const fontAwsIcons = [faHome, faTasks, faCubes, faUser, faPlay, faRegistered];
+  const location = useLocation();
+  const history = useNavigate();
+  const updatedLinks = updateArr(links, fontAwsIcons);
   return (
     <div>
       <ClickOutside
@@ -22,6 +29,12 @@ const Navbar = () => {
         }}
       >
         <SideNav
+          onSelect={(selected) => {
+            const to = `/${selected}`;
+            if (location.pathname !== to) {
+              history(to);
+            }
+          }}
           expanded={state.expanded}
           onToggle={(expanded) => {
             setState({ expanded });
@@ -29,46 +42,19 @@ const Navbar = () => {
         >
           <SideNav.Toggle />
           <SideNav.Nav defaultSelected="home">
-            <NavItem eventKey="home">
-              <NavIcon>
-                <FontAwesomeIcon icon={faHome} />
-              </NavIcon>
-              <NavText>Home</NavText>
-            </NavItem>
-            <NavItem eventKey="categories">
-              <NavIcon>
-                <FontAwesomeIcon icon={faTasks} />
-              </NavIcon>
-              <NavText>Categories</NavText>
-            </NavItem>
-            <NavItem eventKey="leaderboard">
-              <NavIcon>
-                <FontAwesomeIcon icon={faCubes} />
-              </NavIcon>
-              <NavText>Leaderboard</NavText>
-            </NavItem>
-            <NavItem eventKey="profile">
-              <NavIcon>
-                <FontAwesomeIcon icon={faUser} />
-              </NavIcon>
-              <NavText>Profile</NavText>
-            </NavItem>
-            <NavItem eventKey="play">
-              <NavIcon>
-                <FontAwesomeIcon icon={faPlay} />
-              </NavIcon>
-              <NavText>Play</NavText>
-            </NavItem>
-            <NavItem eventKey="login">
-              <NavIcon>
-                <FontAwesomeIcon icon={faRegistered} />
-              </NavIcon>
-              <NavText>Register</NavText>
-            </NavItem>
+            {updatedLinks.map((link) => (
+              <NavItem key={link.path} eventKey={link.path}>
+                <NavIcon>
+                  <FontAwesomeIcon icon={link.icon} />
+                </NavIcon>
+                <NavText>{link.text}</NavText>
+              </NavItem>
+            ))}
           </SideNav.Nav>
         </SideNav>
       </ClickOutside>
     </div>
+
   );
 };
 
