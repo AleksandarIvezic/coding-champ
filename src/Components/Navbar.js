@@ -41,7 +41,7 @@ const Navbar = () => {
           }}
         >
           <SideNav.Toggle />
-          <SideNav.Nav defaultSelected="home">
+          <SideNav.Nav>
             {updatedLinks.map((link) => (
               <NavItem key={link.path} eventKey={link.path}>
                 <NavIcon>
