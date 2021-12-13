@@ -1,3 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `<div />`;
+exports[`renders correctly 1`] = `
+Array [
+  <ul
+    className="categories"
+  >
+    <li>
+      <button
+        className="category"
+        id={1}
+        onClick={[Function]}
+        type="button"
+      >
+        <span>
+          html-logo
+        </span>
+        <span>
+          HTML
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        className="category"
+        id={2}
+        onClick={[Function]}
+        type="button"
+      >
+        <span>
+          css-logo
+        </span>
+        <span>
+          CSS
+        </span>
+      </button>
+    </li>
+    <li>
+      <button
+        className="category"
+        id={3}
+        onClick={[Function]}
+        type="button"
+      >
+        <span>
+          JavaScript-logo
+        </span>
+        <span>
+          JavaScript
+        </span>
+      </button>
+    </li>
+  </ul>,
+  <div
+    className="description"
+  >
+    <h3>
+      The skeleton of every web page. Check how many bones you can break.
+    </h3>
+  </div>,
+]
+`;
