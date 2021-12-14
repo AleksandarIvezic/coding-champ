@@ -1,3 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders correctly 1`] = `<div />`;
+exports[`renders correctly 1`] = `
+Array [
+  <form>
+    <label
+      htmlFor="submit-category"
+    >
+      Choose a category
+      <select
+        defaultValue=""
+        id="categories"
+        name="categories"
+        onChange={[Function]}
+      >
+        <option
+          disabled={true}
+          value=""
+        >
+           
+        </option>
+        <option
+          value="HTML"
+        >
+          HTML
+        </option>
+        <option
+          value="CSS"
+        >
+          CSS
+        </option>
+        <option
+          value="JavaScript"
+        >
+          JavaScript
+        </option>
+      </select>
+    </label>
+  </form>,
+  "",
+  <table
+    className="leaderboard-table"
+  >
+    <thead>
+      <tr>
+        <th>
+          #R
+        </th>
+        <th>
+          Name
+        </th>
+        <th>
+          Score
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      id="leaderboard-data"
+    />
+  </table>,
+]
+`;
