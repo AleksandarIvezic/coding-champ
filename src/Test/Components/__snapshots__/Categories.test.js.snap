@@ -53,10 +53,6 @@ Array [
   </ul>,
   <div
     className="description"
-  >
-    <h3>
-      The skeleton of every web page. Check how many bones you can break.
-    </h3>
-  </div>,
+  />,
 ]
 `;
