@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import mockCategories from '../Library/mockCategories';
 import mockScores from '../Library/mockScores';
 import '../Styles/Leaderboard.css';
+import SelectCategory from './SelectCategory';
 
 const Leaderboard = () => {
   const [selectedCategory, setSelectedCategory] = useState('');
@@ -12,17 +12,7 @@ const Leaderboard = () => {
 
   return (
     <>
-      <form>
-        <label htmlFor="submit-category">
-          Choose a category
-          <select id="categories" name="categories" defaultValue="" onChange={handleChange}>
-            <option value="" disabled> </option>
-            {mockCategories.map((category) => (
-              <option key={`category-${uuidv4()}`} value={category.name}>{category.name}</option>
-            ))}
-          </select>
-        </label>
-      </form>
+      <SelectCategory handleChange={handleChange} />
       {selectedCategory
       && <h3>{selectedCategory}</h3>}
       <table className="leaderboard-table">
