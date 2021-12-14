@@ -1,6 +1,6 @@
 .profile-header,
 .best-scores {
-  display: flex;  
+  display: flex;
   justify-content: space-evenly;
   margin: 50px 140px;
 }
