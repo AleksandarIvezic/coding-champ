@@ -33,3 +33,9 @@ ul {
 .d-flex {
   display: flex;
 }
+
+.flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

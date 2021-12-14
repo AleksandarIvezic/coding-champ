@@ -1,0 +1,15 @@
+.play-button {
+  background-color: #db3d44;
+  font-size: 3rem;
+  color: #fff;
+  padding: 15px 15px;
+  border-radius: 50%;
+  border: none;
+}
+
+.play-button:hover {
+  background-color: #d62d35;
+  transform: scale(1.1);
+  color: rgb(233, 206, 206);
+  border-radius: 50%;
+}
