@@ -1,0 +1,90 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <div
+    className="select-category"
+  >
+    <h3>
+      Choose your tech
+    </h3>
+    <form>
+      <label
+        htmlFor="submit-category"
+      >
+        Choose a category
+        <select
+          defaultValue=""
+          id="categories"
+          name="categories"
+          onChange={[Function]}
+        >
+          <option
+            disabled={true}
+            value=""
+          >
+             
+          </option>
+          <option
+            value="HTML"
+          >
+            HTML
+          </option>
+          <option
+            value="CSS"
+          >
+            CSS
+          </option>
+          <option
+            value="JavaScript"
+          >
+            JavaScript
+          </option>
+        </select>
+      </label>
+    </form>
+    
+  </div>,
+  <div
+    className="difficulty-level d-flex"
+  >
+    <button
+      className="category flex-centered"
+      type="button"
+    >
+      <span>
+        easy
+      </span>
+    </button>
+    <button
+      className="category flex-centered"
+      type="button"
+    >
+      <span>
+        medium
+      </span>
+    </button>
+    <button
+      className="category flex-centered"
+      type="button"
+    >
+      <span>
+        hard
+      </span>
+    </button>
+  </div>,
+  <div>
+    <button
+      className="play-button"
+      type="button"
+    >
+      <a
+        href="/game"
+        onClick={[Function]}
+      >
+        Start the quiz
+      </a>
+    </button>
+  </div>,
+]
+`;

@@ -1,0 +1,27 @@
+.gameMenu {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.game-menu-icon {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.game-menu-icon:hover {
+  color: rgb(204, 156, 53);
+}
+
+.game-menu-item {
+  display: block;
+  width: 200px;
+  background-color: #78facf;
+  font-size: 1.3rem;
+  color: gray;
+}
+
+.game-menu-item:hover {
+  background-color: #3d856d;
+  color: #000;
+}
