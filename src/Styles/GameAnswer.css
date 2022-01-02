@@ -1,15 +1,15 @@
 .game-answer {
   background-color: rgb(151, 250, 151);
   clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
-  color:rgb(37, 56, 37);
+  color: rgb(37, 56, 37);
   width: 300px;
   padding: 20px;
   margin: 10px;
   border: none;
 }
 
-.game-answer:hover, 
+.game-answer:hover,
 .game-answer:focus {
-  background-color: rgb(194, 197, 15);  
-  color:rgb(20, 29, 20);
+  background-color: rgb(194, 197, 15);
+  color: rgb(20, 29, 20);
 }
