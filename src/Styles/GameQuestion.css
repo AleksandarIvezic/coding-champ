@@ -1,0 +1,9 @@
+.game-question {
+  background-color: rgb(193, 211, 193);
+  color: rgb(12, 37, 39);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin: 40px;
+}

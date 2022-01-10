@@ -6,6 +6,7 @@ import Categories from './Categories';
 import Leaderboard from './Leaderboard';
 import Profile from './Profile';
 import Play from './Play';
+import Game from './Game';
 import Login from './Login';
 import '../Styles/App.css';
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="leaderboard" element={<Leaderboard />} />
           <Route path="profile" element={<Profile />} />
           <Route path="play" element={<Play />} />
+          <Route path="play/game" element={<Game />} />
           <Route path="login" element={<Login />} />
         </Routes>
       </div>

@@ -1,0 +1,25 @@
+.game {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10007;
+  margin: 0;
+  padding: 0;
+  background-color: blue;
+}
+
+.answers {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.timer {
+  clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+  width: 15%;
+  margin: 20px 0;
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
